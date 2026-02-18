@@ -831,9 +831,7 @@ export default function SocratixPositioning() {
             4 years as a B2B PM — launched a vertical from 0→1, ran customer research to product spec to shipped feature, and built the growth models to prove it worked. MS Engineering Management at Purdue. Looking for a founding-team internship this summer.
           </div>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.35)", lineHeight: 1.6, marginBottom: 14, fontStyle: "italic" }}>
-            Why I built this: Socratix is solving one of those rare problems where the buyer's pain is obvious and quantifiable — 
-            fraud teams are drowning in alerts they know are false, and the cost is measurable in hours and dollars. 
-            I wanted to show how I think about positioning and ROI, not just talk about it.
+            Why I built this: I wanted to understand the fraud ops market well enough to have a real opinion — not just parrot back what's on your website. This is what I found.
           </div>
           <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
             {[
