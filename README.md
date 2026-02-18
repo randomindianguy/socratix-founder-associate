@@ -2,7 +2,7 @@
 
 Interactive competitive positioning and ROI model for [Socratix AI](https://getsocratix.ai) (YC S25) — AI coworkers for fraud and risk teams.
 
-**[Live Demo →](https://your-vercel-url.vercel.app)**
+**[Live Demo →](https://socratix-founder-associate.vercel.app/)**
 
 ## What This Is
 
