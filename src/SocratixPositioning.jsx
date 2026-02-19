@@ -167,10 +167,10 @@ function AttributeRow({ attr, expandedAttr, onToggle }) {
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }}>
           <div>
             <div style={{ fontSize: 13, fontWeight: 600, color: "#fff" }}>{attr.label}</div>
-            <div style={{ fontSize: 11, color: "rgba(255,255,255,0.35)", marginTop: 2 }}>{attr.description}</div>
+            <div style={{ fontSize: 11, color: "rgba(255,255,255,0.75)", marginTop: 2 }}>{attr.description}</div>
           </div>
           <div style={{
-            fontSize: 16, color: "rgba(255,255,255,0.25)",
+            fontSize: 16, color: "rgba(255,255,255,0.6)",
             transform: isExpanded ? "rotate(180deg)" : "rotate(0)",
             transition: "transform 0.3s ease", flexShrink: 0, marginLeft: 12,
           }}>▾</div>
@@ -208,7 +208,7 @@ function AttributeRow({ attr, expandedAttr, onToggle }) {
             <div style={{ fontSize: 10, fontWeight: 700, color: "rgba(200,170,80,0.7)", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 4 }}>
               Why buyers care
             </div>
-            <div style={{ fontSize: 12, color: "rgba(255,255,255,0.5)", lineHeight: 1.6 }}>
+            <div style={{ fontSize: 12, color: "rgba(255,255,255,0.85)", lineHeight: 1.6 }}>
               {attr.buyerCare}
             </div>
           </div>
@@ -227,7 +227,7 @@ function AttributeRow({ attr, expandedAttr, onToggle }) {
                   {a.label}
                 </span>
               </div>
-              <div style={{ fontSize: 12, color: "rgba(255,255,255,0.4)", lineHeight: 1.6, paddingLeft: 22 }}>
+              <div style={{ fontSize: 12, color: "rgba(255,255,255,0.6)", lineHeight: 1.6, paddingLeft: 22 }}>
                 {attr.details[a.id]}
               </div>
             </div>
@@ -243,7 +243,7 @@ function Slider({ label, value, min, max, step, unit, prefix, onChange, color = 
   return (
     <div style={{ marginBottom: 20 }}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 8 }}>
-        <span style={{ fontSize: 12, color: "rgba(255,255,255,0.5)", fontWeight: 500 }}>{label}</span>
+        <span style={{ fontSize: 12, color: "rgba(255,255,255,0.85)", fontWeight: 500 }}>{label}</span>
         <span style={{ fontSize: 14, fontWeight: 700, color: "#fff", fontFamily: "'JetBrains Mono', 'SF Mono', monospace" }}>
           {prefix || ""}{typeof value === "number" && value % 1 !== 0 ? value.toFixed(1) : value}{unit || ""}
         </span>
@@ -318,7 +318,7 @@ export default function SocratixPositioning() {
         pointerEvents: "none",
       }} />
 
-      <div style={{ maxWidth: 640, margin: "0 auto", padding: "40px 20px 60px", position: "relative" }}>
+      <div style={{ maxWidth: 780, margin: "0 auto", padding: "40px 20px 60px", position: "relative" }}>
 
         {/* ── HEADER ── */}
         <div style={{ marginBottom: 28, animation: "fadeIn 0.6s ease" }}>
@@ -333,7 +333,7 @@ export default function SocratixPositioning() {
             <span style={{ color: "#3B82F6" }}>AI agents</span>{" "}
             in fraud operations.
           </h1>
-          <p style={{ fontSize: 14, color: "rgba(255,255,255,0.4)", lineHeight: 1.65, maxWidth: 540 }}>
+          <p style={{ fontSize: 14, color: "rgba(255,255,255,0.6)", lineHeight: 1.65, maxWidth: 540 }}>
             How Socratix positions against every alternative a fraud team evaluates — 
             and what the switch is worth in dollars, hours, and headcount.
           </p>
@@ -385,11 +385,11 @@ export default function SocratixPositioning() {
               background: "rgba(59,130,246,0.04)", borderRadius: 12,
               border: "1px solid rgba(59,130,246,0.1)",
             }}>
-              <div style={{ fontSize: 14, color: "rgba(255,255,255,0.65)", lineHeight: 1.7, fontWeight: 500 }}>
+              <div style={{ fontSize: 14, color: "rgba(255,255,255,0.8)", lineHeight: 1.7, fontWeight: 500 }}>
                 Fraud teams have 4 options today: hire analysts, buy rule engines, use ML platforms, or deploy AI agents. 
                 Below is how each scores on the <span style={{ color: "#3B82F6" }}>6 things buyers actually care about</span>.
               </div>
-              <div style={{ fontSize: 12, color: "rgba(255,255,255,0.3)", marginTop: 8 }}>
+              <div style={{ fontSize: 12, color: "rgba(255,255,255,0.85)", marginTop: 8 }}>
                 👆 Tap any row to see the full breakdown per competitor.
               </div>
             </div>
@@ -399,7 +399,7 @@ export default function SocratixPositioning() {
               display: "flex", gap: 12, flexWrap: "wrap", marginBottom: 16, padding: "10px 14px",
               background: "rgba(255,255,255,0.02)", borderRadius: 8, border: "1px solid rgba(255,255,255,0.04)",
             }}>
-              <div style={{ fontSize: 10, color: "rgba(255,255,255,0.25)", fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase", marginRight: 4, display: "flex", alignItems: "center" }}>
+              <div style={{ fontSize: 10, color: "rgba(255,255,255,0.6)", fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase", marginRight: 4, display: "flex", alignItems: "center" }}>
                 The 4 approaches:
               </div>
               {APPROACHES.map((a) => (
@@ -444,12 +444,12 @@ export default function SocratixPositioning() {
               >
                 <div>
                   <div style={{ fontSize: 13, fontWeight: 600, color: "#fff" }}>Counter-Positioning</div>
-                  <div style={{ fontSize: 11, color: "rgba(255,255,255,0.35)", marginTop: 2 }}>
+                  <div style={{ fontSize: 11, color: "rgba(255,255,255,0.75)", marginTop: 2 }}>
                     How Socratix turns each competitor's weakness into its strength
                   </div>
                 </div>
                 <div style={{
-                  fontSize: 16, color: "rgba(255,255,255,0.25)",
+                  fontSize: 16, color: "rgba(255,255,255,0.6)",
                   transform: showCounterPos ? "rotate(180deg)" : "rotate(0)",
                   transition: "transform 0.3s ease",
                 }}>▾</div>
@@ -458,7 +458,7 @@ export default function SocratixPositioning() {
               {showCounterPos && (
                 <div style={{ padding: "0 18px 18px", animation: "fadeIn 0.3s ease" }}>
                   <div style={{
-                    fontSize: 12, color: "rgba(255,255,255,0.4)", lineHeight: 1.6,
+                    fontSize: 12, color: "rgba(255,255,255,0.6)", lineHeight: 1.6,
                     marginBottom: 14, fontStyle: "italic",
                   }}>
                     "Counter-positioning works because the incumbent finds it hard to move against you." 
@@ -475,20 +475,20 @@ export default function SocratixPositioning() {
                         transition: "all 0.2s ease",
                       }}
                     >
-                      <div style={{ fontSize: 11, fontWeight: 700, color: "rgba(255,255,255,0.5)", letterSpacing: "0.04em", marginBottom: 4 }}>
+                      <div style={{ fontSize: 11, fontWeight: 700, color: "rgba(255,255,255,0.85)", letterSpacing: "0.04em", marginBottom: 4 }}>
                         vs. {cp.against}
                       </div>
                       <div style={{ display: "flex", gap: 8, fontSize: 12, lineHeight: 1.6 }}>
                         <div style={{ flex: 1 }}>
                           <span style={{ color: "rgba(200,130,130,0.7)", fontWeight: 500 }}>Their gap: </span>
-                          <span style={{ color: "rgba(255,255,255,0.45)" }}>{cp.weakness}</span>
+                          <span style={{ color: "rgba(255,255,255,0.8)" }}>{cp.weakness}</span>
                         </div>
                       </div>
                       {expandedCP === i && (
                         <div style={{ marginTop: 10, animation: "fadeIn 0.2s ease" }}>
                           <div style={{ fontSize: 12, lineHeight: 1.6, marginBottom: 8 }}>
                             <span style={{ color: "rgba(59,130,246,0.8)", fontWeight: 500 }}>Socratix flips it: </span>
-                            <span style={{ color: "rgba(255,255,255,0.5)" }}>{cp.socratixStrength}</span>
+                            <span style={{ color: "rgba(255,255,255,0.85)" }}>{cp.socratixStrength}</span>
                           </div>
                           <div style={{
                             fontSize: 12, color: "rgba(200,170,80,0.6)", fontStyle: "italic",
@@ -514,11 +514,11 @@ export default function SocratixPositioning() {
               <div style={{ fontSize: 11, fontWeight: 700, color: "#3B82F6", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 8 }}>
                 The positioning statement
               </div>
-              <div style={{ fontSize: 14, color: "rgba(255,255,255,0.7)", lineHeight: 1.7, fontWeight: 500 }}>
+              <div style={{ fontSize: 14, color: "rgba(255,255,255,0.85)", lineHeight: 1.7, fontWeight: 500 }}>
                 "For fraud and risk teams drowning in alerts, Socratix is the <span style={{ color: "#3B82F6" }}>AI coworker</span> that 
                 investigates autonomously — unlike ML platforms that detect threats but still leave humans to do all the work."
               </div>
-              <div style={{ fontSize: 12, color: "rgba(255,255,255,0.3)", marginTop: 10, lineHeight: 1.6 }}>
+              <div style={{ fontSize: 12, color: "rgba(255,255,255,0.85)", marginTop: 10, lineHeight: 1.6 }}>
                 Anchor category: AI-powered fraud tools. Differentiation: autonomous investigation with explainable decisions. 
                 The competitive moat isn't detection accuracy — it's <span style={{ color: "#3B82F6" }}>investigation speed × explainability</span>.
               </div>
@@ -560,7 +560,7 @@ export default function SocratixPositioning() {
                   <div style={{ fontSize: 20, fontWeight: 700, color: item.color, fontFamily: "'JetBrains Mono', monospace" }}>
                     {item.stat}
                   </div>
-                  <div style={{ fontSize: 11, color: "rgba(255,255,255,0.4)", lineHeight: 1.4, marginTop: 4 }}>
+                  <div style={{ fontSize: 11, color: "rgba(255,255,255,0.6)", lineHeight: 1.4, marginTop: 4 }}>
                     {item.label}
                   </div>
                 </div>
@@ -572,10 +572,10 @@ export default function SocratixPositioning() {
               padding: "20px", background: "rgba(255,255,255,0.02)",
               border: "1px solid rgba(255,255,255,0.06)", borderRadius: 14, marginBottom: 20,
             }}>
-              <div style={{ fontSize: 14, fontWeight: 600, color: "rgba(255,255,255,0.7)", marginBottom: 4 }}>
+              <div style={{ fontSize: 14, fontWeight: 600, color: "rgba(255,255,255,0.85)", marginBottom: 4 }}>
                 Plug in your team's numbers
               </div>
-              <div style={{ fontSize: 12, color: "rgba(255,255,255,0.35)", marginBottom: 16, lineHeight: 1.5 }}>
+              <div style={{ fontSize: 12, color: "rgba(255,255,255,0.75)", marginBottom: 16, lineHeight: 1.5 }}>
                 Drag the sliders to match your fraud team — the savings update live below.
               </div>
               <Slider label="Fraud analysts on team" value={teamSize} min={2} max={50} step={1} onChange={setTeamSize} />
@@ -586,7 +586,7 @@ export default function SocratixPositioning() {
             </div>
 
             {/* Current State */}
-            <div style={{ fontSize: 12, color: "rgba(255,255,255,0.3)", marginBottom: 8, paddingLeft: 2 }}>
+            <div style={{ fontSize: 12, color: "rgba(255,255,255,0.85)", marginBottom: 8, paddingLeft: 2 }}>
               ↓ Here's what those numbers cost you today:
             </div>
             <div style={{
@@ -604,15 +604,15 @@ export default function SocratixPositioning() {
                   { label: "Hours investigating nothing", value: fmtNum(hoursOnFP), sub: "hours per year", color: "#E57373" },
                 ].map((item, i) => (
                   <div key={i}>
-                    <div style={{ fontSize: 10, color: "rgba(255,255,255,0.35)", textTransform: "uppercase", letterSpacing: "0.06em" }}>{item.label}</div>
+                    <div style={{ fontSize: 10, color: "rgba(255,255,255,0.75)", textTransform: "uppercase", letterSpacing: "0.06em" }}>{item.label}</div>
                     <div style={{ fontSize: 22, fontWeight: 700, color: item.color, fontFamily: "'JetBrains Mono', monospace" }}>{item.value}</div>
-                    <div style={{ fontSize: 11, color: "rgba(255,255,255,0.3)" }}>{item.sub}</div>
+                    <div style={{ fontSize: 11, color: "rgba(255,255,255,0.85)" }}>{item.sub}</div>
                   </div>
                 ))}
               </div>
               {/* Bar */}
               <div style={{ marginTop: 16 }}>
-                <div style={{ fontSize: 11, color: "rgba(255,255,255,0.3)", marginBottom: 6 }}>Team time on false positives</div>
+                <div style={{ fontSize: 11, color: "rgba(255,255,255,0.85)", marginBottom: 6 }}>Team time on false positives</div>
                 <div style={{ height: 8, background: "rgba(255,255,255,0.06)", borderRadius: 4, overflow: "hidden" }}>
                   <div style={{
                     height: "100%", width: `${Math.min(fpCostPct, 100)}%`,
@@ -627,7 +627,7 @@ export default function SocratixPositioning() {
             </div>
 
             {/* With Socratix */}
-            <div style={{ fontSize: 12, color: "rgba(255,255,255,0.3)", marginBottom: 8, marginTop: 16, paddingLeft: 2 }}>
+            <div style={{ fontSize: 12, color: "rgba(255,255,255,0.85)", marginBottom: 8, marginTop: 16, paddingLeft: 2 }}>
               ↓ Now, with AI agents handling investigation:
             </div>
             <div style={{
@@ -645,9 +645,9 @@ export default function SocratixPositioning() {
                   { label: "Effective false positive rate", value: `${effectiveFP.toFixed(0)}%`, sub: `down from ${falsePositiveRate}%`, color: "#4FC3F7" },
                 ].map((item, i) => (
                   <div key={i}>
-                    <div style={{ fontSize: 10, color: "rgba(255,255,255,0.35)", textTransform: "uppercase", letterSpacing: "0.06em" }}>{item.label}</div>
+                    <div style={{ fontSize: 10, color: "rgba(255,255,255,0.75)", textTransform: "uppercase", letterSpacing: "0.06em" }}>{item.label}</div>
                     <div style={{ fontSize: 26, fontWeight: 700, color: item.color, fontFamily: "'JetBrains Mono', monospace" }}>{item.value}</div>
-                    <div style={{ fontSize: 11, color: "rgba(255,255,255,0.3)" }}>{item.sub}</div>
+                    <div style={{ fontSize: 11, color: "rgba(255,255,255,0.85)" }}>{item.sub}</div>
                   </div>
                 ))}
               </div>
@@ -658,10 +658,10 @@ export default function SocratixPositioning() {
               padding: "16px 18px", background: "rgba(255,255,255,0.02)",
               border: "1px solid rgba(255,255,255,0.06)", borderRadius: 12, marginBottom: 20,
             }}>
-              <div style={{ fontSize: 11, fontWeight: 700, color: "rgba(255,255,255,0.35)", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>
+              <div style={{ fontSize: 11, fontWeight: 700, color: "rgba(255,255,255,0.75)", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 10 }}>
                 What this means in practice
               </div>
-              <div style={{ fontSize: 13, color: "rgba(255,255,255,0.55)", lineHeight: 1.7 }}>
+              <div style={{ fontSize: 13, color: "rgba(255,255,255,0.75)", lineHeight: 1.7 }}>
                 {analystEquiv >= 2 ? (
                   <>
                     Your team could <span style={{ color: "#4FC3F7", fontWeight: 500 }}>redeploy {Math.floor(analystEquiv)} analysts</span> from
@@ -688,7 +688,7 @@ export default function SocratixPositioning() {
               <div style={{ fontSize: 10, fontWeight: 700, color: "rgba(200,170,80,0.7)", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 6 }}>
                 Model assumptions
               </div>
-              <div style={{ fontSize: 11, color: "rgba(255,255,255,0.35)", lineHeight: 1.7 }}>
+              <div style={{ fontSize: 11, color: "rgba(255,255,255,0.75)", lineHeight: 1.7 }}>
                 85% reduction in investigation time (based on reported "full-day to 15-min" outcomes). 
                 40% reduction in false positive rate via AI pre-screening. 
                 2,080 working hours/analyst/year. 260 working days. 
@@ -729,7 +729,7 @@ export default function SocratixPositioning() {
             }}>
               What I'd ship in <span style={{ color: "#3B82F6" }}>30 days.</span>
             </h2>
-            <p style={{ fontSize: 14, color: "rgba(255,255,255,0.4)", lineHeight: 1.6 }}>
+            <p style={{ fontSize: 14, color: "rgba(255,255,255,0.6)", lineHeight: 1.6 }}>
               Three things I'd own in the first month — scoped for a founding team selling enterprise deals, not a 50-person growth org.
             </p>
           </div>
@@ -783,7 +783,7 @@ export default function SocratixPositioning() {
                   </div>
                 </div>
               </div>
-              <div style={{ fontSize: 12, color: "rgba(255,255,255,0.45)", lineHeight: 1.7, marginBottom: 10 }}>
+              <div style={{ fontSize: 12, color: "rgba(255,255,255,0.8)", lineHeight: 1.7, marginBottom: 10 }}>
                 {item.what}
               </div>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
@@ -794,7 +794,7 @@ export default function SocratixPositioning() {
                   <div style={{ fontSize: 9, fontWeight: 700, color: "rgba(59,130,246,0.6)", letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 3 }}>
                     Deliverable
                   </div>
-                  <div style={{ fontSize: 11, color: "rgba(255,255,255,0.4)", lineHeight: 1.5 }}>
+                  <div style={{ fontSize: 11, color: "rgba(255,255,255,0.6)", lineHeight: 1.5 }}>
                     {item.deliverable}
                   </div>
                 </div>
@@ -805,7 +805,7 @@ export default function SocratixPositioning() {
                   <div style={{ fontSize: 9, fontWeight: 700, color: "rgba(130,200,130,0.6)", letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 3 }}>
                     Success metric
                   </div>
-                  <div style={{ fontSize: 11, color: "rgba(255,255,255,0.4)", lineHeight: 1.5 }}>
+                  <div style={{ fontSize: 11, color: "rgba(255,255,255,0.6)", lineHeight: 1.5 }}>
                     {item.metric}
                   </div>
                 </div>
@@ -827,10 +827,10 @@ export default function SocratixPositioning() {
           <div style={{ fontSize: 18, fontWeight: 700, color: "#fff", fontFamily: "'Playfair Display', serif", marginBottom: 4 }}>
             Sidharth Sundaram
           </div>
-          <div style={{ fontSize: 13, color: "rgba(255,255,255,0.5)", lineHeight: 1.7, marginBottom: 14 }}>
+          <div style={{ fontSize: 13, color: "rgba(255,255,255,0.85)", lineHeight: 1.7, marginBottom: 14 }}>
             4 years as a B2B PM — launched a vertical from 0→1, ran customer research to product spec to shipped feature, and built the growth models to prove it worked. MS Engineering Management at Purdue. Looking for a founding-team internship this summer.
           </div>
-          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.35)", lineHeight: 1.6, marginBottom: 14, fontStyle: "italic" }}>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.75)", lineHeight: 1.6, marginBottom: 14, fontStyle: "italic" }}>
             Why I built this: I wanted to understand the fraud ops market well enough to have a real opinion — not just parrot back what's on your website. This is what I found.
           </div>
           <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
@@ -865,10 +865,10 @@ export default function SocratixPositioning() {
           marginTop: 48, padding: "24px 0",
           borderTop: "1px solid rgba(255,255,255,0.06)",
         }}>
-          <div style={{ fontSize: 11, color: "rgba(255,255,255,0.25)", letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 12 }}>
+          <div style={{ fontSize: 11, color: "rgba(255,255,255,0.6)", letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: 12 }}>
             Sources
           </div>
-          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.3)", lineHeight: 1.7 }}>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.85)", lineHeight: 1.7 }}>
             False positive benchmarks: Flagright, LexisNexis, Global Investigations Review. 
             Salary data: Salary.com, Glassdoor (2025). 
             Socratix performance: SiliconANGLE, Pear VC investment memo (Oct 2025). 
